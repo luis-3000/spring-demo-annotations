@@ -2,8 +2,7 @@ package com.joselcastillo.springdemo;
 
 import org.springframework.stereotype.Component;
 
-//Pass in the bean id we want to use, to the @Component annotation
-@Component("thatSillyCoach")
+@Component // Changed from the explicit "thatSillyCoach" bean id, to a default bean id by removing that name
 public class TennisCoach implements Coach_Interface {
 
 	@Override
