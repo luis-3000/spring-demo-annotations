@@ -8,9 +8,11 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach_Interface {
 
 	@Autowired
-	@Qualifier("happyFortuneService") // Use the @Qualifier annotation and indicate the bean id that you want to use
+	@Qualifier("randomFortuneService")
+	// Use the @Qualifier annotation and indicate the bean id that you want to use
 	// in order to force the correct dependency injection
 	private FortuneService_Interface fortuneService;
+	
 	
 //	// Constructor for injection
 //	@Autowired /* Spring will scan for a component that implements the FortuneService interface.

@@ -32,7 +32,14 @@ public class AnnotationDemoApp {
  
 	>> TennisCoach class: inside the default constructor TennisCoach()
 	Your Tennis workout: Practice your backhand volley
-	Tennis coach fortune says: Today is your lucky day!
-
+	Tennis coach fortune says: Beware of the wolf in sheep's clothing
 	
+*/
+
+/* SECOND SAMPLE OUTPUT
+	 
+	>> TennisCoach class: inside the default constructor TennisCoach()
+	Your Tennis workout: Practice your backhand volley
+	Tennis coach fortune says: The Journey is the reward
+
 */
