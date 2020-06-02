@@ -1,12 +1,15 @@
 package com.joselcastillo.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component // Changed from the explicit "thatSillyCoach" bean id, to a default bean id by removing that name
 public class TennisCoach implements Coach_Interface {
 
 	@Autowired
+	@Qualifier("happyFortuneService") // Use the @Qualifier annotation and indicate the bean id that you want to use
+	// in order to force the correct dependency injection
 	private FortuneService_Interface fortuneService;
 	
 //	// Constructor for injection
