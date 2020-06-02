@@ -31,15 +31,9 @@ public class AnnotationDemoApp {
 /* SAMPLE OUTPUT
  
 	>> TennisCoach class: inside the default constructor TennisCoach()
+	 >> TennisCoach class: inside the doMyStartupStuff() method
 	Your Tennis workout: Practice your backhand volley
-	Tennis coach fortune says: Beware of the wolf in sheep's clothing
-	
-*/
+	Tennis coach fortune says: Diligence is the mother of good luck
+	 >> TennisCoach class: inside the doMyCleanupStuff() method
 
-/* SECOND SAMPLE OUTPUT
-	 
-	>> TennisCoach class: inside the default constructor TennisCoach()
-	Your Tennis workout: Practice your backhand volley
-	Tennis coach fortune says: The Journey is the reward
-
-*/
+*/ 

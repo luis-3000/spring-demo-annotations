@@ -1,7 +1,11 @@
 package com.joselcastillo.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component // Changed from the explicit "thatSillyCoach" bean id, to a default bean id by removing that name
@@ -30,6 +34,19 @@ public class TennisCoach implements Coach_Interface {
 	public TennisCoach() {
 		System.out.println(">> TennisCoach class: inside the default constructor TennisCoach()");
 	}
+	
+	// Define the init method
+	@PostConstruct // This instructs Spring to execute after the constructor and after injection of dependencies
+	public void doMyStartupStuff() {
+		System.out.println(" >> TennisCoach class: inside the doMyStartupStuff() method");
+	}
+	
+	// Define the destroy method
+	@PreDestroy // This instructs Spring to execute the Code before the bean is destroyed
+	public void doMyCleanupStuff() {
+		System.out.println(" >> TennisCoach class: inside the doMyCleanupStuff() method");
+	}
+	
 	
 //	// Define a setter method for dependency injection
 //	@Autowired // Tells Spring "I want you to autowire this dependency using this setter method"
