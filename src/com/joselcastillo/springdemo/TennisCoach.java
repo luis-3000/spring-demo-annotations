@@ -28,24 +28,24 @@ public class TennisCoach implements Coach_Interface {
 //		fortuneService = theFortuneService;
 //	}
 	
-	// The above injection constructor is no longer needed since we'll be doing setter methods
-	// dependency injection
-	// Define a Default Constructor
-	public TennisCoach() {
-		System.out.println(">> TennisCoach class: inside the default constructor TennisCoach()");
-	}
-	
-	// Define the init method
-	@PostConstruct // This instructs Spring to execute after the constructor and after injection of dependencies
-	public void doMyStartupStuff() {
-		System.out.println(" >> TennisCoach class: inside the doMyStartupStuff() method");
-	}
-	
-	// Define the destroy method
-	@PreDestroy // This instructs Spring to execute the Code before the bean is destroyed
-	public void doMyCleanupStuff() {
-		System.out.println(" >> TennisCoach class: inside the doMyCleanupStuff() method");
-	}
+//	// The above injection constructor is no longer needed since we'll be doing setter methods
+//	// dependency injection
+//	// Define a Default Constructor
+//	public TennisCoach() {
+//		System.out.println(">> TennisCoach class: inside the default constructor TennisCoach()");
+//	}
+//	
+//	// Define the init method
+//	@PostConstruct // This instructs Spring to execute after the constructor and after injection of dependencies
+//	public void doMyStartupStuff() {
+//		System.out.println(" >> TennisCoach class: inside the doMyStartupStuff() method");
+//	}
+//	
+//	// Define the destroy method
+//	@PreDestroy // This instructs Spring to execute the Code before the bean is destroyed
+//	public void doMyCleanupStuff() {
+//		System.out.println(" >> TennisCoach class: inside the doMyCleanupStuff() method");
+//	}
 	
 	
 //	// Define a setter method for dependency injection
