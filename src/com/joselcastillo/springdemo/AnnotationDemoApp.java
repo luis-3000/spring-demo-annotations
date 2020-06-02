@@ -31,7 +31,6 @@ public class AnnotationDemoApp {
 /* SAMPLE OUTPUT
  
 	>> TennisCoach class: inside the default constructor TennisCoach()
-	>> TennisCoach class: inside the method anyMethodToPerformTheDependencyInjection()
 	Your Tennis workout: Practice your backhand volley
 	Tennis coach fortune says: Today is your lucky day!
 

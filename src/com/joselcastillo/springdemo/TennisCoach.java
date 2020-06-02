@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component // Changed from the explicit "thatSillyCoach" bean id, to a default bean id by removing that name
 public class TennisCoach implements Coach_Interface {
 
+	@Autowired
 	private FortuneService_Interface fortuneService;
 	
 //	// Constructor for injection
@@ -32,14 +33,18 @@ public class TennisCoach implements Coach_Interface {
 //		fortuneService = theFortuneService;
 //	}
 	
-	/* The above setter method for injection is no longer needed since we're trying to do dependency injection
-	 * via any method in the class. All we have to do is create any method, put the @Autowired annotation above it,
-	 * and then assign the corresponding dependency inside it. */
-	@Autowired
-	public void anyMethodToPerformTheDependencyInjection(FortuneService_Interface theFortuneService) {
-		System.out.println(">> TennisCoach class: inside the method anyMethodToPerformTheDependencyInjection()");
-		this.fortuneService = theFortuneService;
-	}
+//	/* The above setter method for injection is no longer needed since we're trying to do dependency injection
+//	 * via any method in the class. All we have to do is create any method, put the @Autowired annotation above it,
+//	 * and then assign the corresponding dependency inside it. */
+//	@Autowired
+//	public void anyMethodToPerformTheDependencyInjection(FortuneService_Interface theFortuneService) {
+//		System.out.println(">> TennisCoach class: inside the method anyMethodToPerformTheDependencyInjection()");
+//		this.fortuneService = theFortuneService;
+//	}
+	
+	/* The above method is no longer needed to do the dependency injection since we can inject the dependencies
+	 * by setting the field values in the class directly (even private fields) with the @Autowired annotation. 
+	 * So, that'll be done at the beginning of the class. */
 	
 	@Override
 	public String getDailyWorkout() {
