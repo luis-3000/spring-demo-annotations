@@ -25,11 +25,20 @@ public class TennisCoach implements Coach_Interface {
 		System.out.println(">> TennisCoach class: inside the default constructor TennisCoach()");
 	}
 	
-	// Define a setter method for dependency injection
-	@Autowired // Tells Spring "I want you to autowire this dependency using this setter method"
-	public void setFortuneService(FortuneService_Interface theFortuneService) {
-		System.out.println(">> TennisCoach class: inside the setter method setFortuneService()"); 
-		fortuneService = theFortuneService;
+//	// Define a setter method for dependency injection
+//	@Autowired // Tells Spring "I want you to autowire this dependency using this setter method"
+//	public void setFortuneService(FortuneService_Interface theFortuneService) {
+//		System.out.println(">> TennisCoach class: inside the setter method setFortuneService()"); 
+//		fortuneService = theFortuneService;
+//	}
+	
+	/* The above setter method for injection is no longer needed since we're trying to do dependency injection
+	 * via any method in the class. All we have to do is create any method, put the @Autowired annotation above it,
+	 * and then assign the corresponding dependency inside it. */
+	@Autowired
+	public void anyMethodToPerformTheDependencyInjection(FortuneService_Interface theFortuneService) {
+		System.out.println(">> TennisCoach class: inside the method anyMethodToPerformTheDependencyInjection()");
+		this.fortuneService = theFortuneService;
 	}
 	
 	@Override
@@ -41,6 +50,6 @@ public class TennisCoach implements Coach_Interface {
 	public String getDailyFortune() {
 		return "Tennis coach fortune says: " + fortuneService.getFortune() ;
 	}
-	
+		
 
 }
