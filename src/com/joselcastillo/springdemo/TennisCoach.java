@@ -26,7 +26,7 @@ public class TennisCoach implements Coach_Interface {
 	}
 	
 	// Define a setter method for dependency injection
-	@Autowired // Tells Spring "I want you to autowire this dependency using this setter method
+	@Autowired // Tells Spring "I want you to autowire this dependency using this setter method"
 	public void setFortuneService(FortuneService_Interface theFortuneService) {
 		System.out.println(">> TennisCoach class: inside the setter method setFortuneService()"); 
 		fortuneService = theFortuneService;
