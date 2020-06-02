@@ -10,7 +10,10 @@ public class TennisCoach implements Coach_Interface {
 	
 	// Constructor for injection
 	@Autowired /* Spring will scan for a component that implements the FortuneService interface.
-	For this project, it will be the class HappyFortuneService that meets this requirement. */
+	For this project, it will be the class HappyFortuneService that meets this requirement. 
+	NOTE: as of Spring 4.3 an @Autowired annotation on a constructor is no longer necessary if the 
+	target bean only defines one constructor to begin with. However, if several constructors are
+	available, at least one must be annotated to teach the container which one to use.*/
 	public TennisCoach(FortuneService_Interface theFortuneService) {
 		fortuneService = theFortuneService;
 	}
