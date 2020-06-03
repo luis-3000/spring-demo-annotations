@@ -14,22 +14,22 @@ public class PingPongCoach implements Coach_Interface {
 	@Qualifier("fileFortuneService") // or is it "randomFortuneService" ?
 	private FortuneService_Interface fortuneService;
 	
-	// define a default constructor
-	public PingPongCoach() {
-		System.out.println(">> PingPongCoach class: inside default constructor PingPongCoach()");
-	}
-	
-	// Define the init method
-	@PostConstruct // This instructs Spring to execute after the constructor and after injection of dependencies
-	public void doMyStartupStuff() {
-		System.out.println(" >> PingPongCoach class: inside the doMyStartupStuff() method");
-	}
-	
-	// Define the destroy method
-	@PreDestroy // This instructs Spring to execute the Code before the bean is destroyed
-	public void doMyCleanupStuff() {
-		System.out.println(" >> PingPongCoach class: inside the doMyCleanupStuff() method");
-	}
+//	// define a default constructor
+//	public PingPongCoach() {
+//		System.out.println(">> PingPongCoach class: inside default constructor PingPongCoach()");
+//	}
+//	
+//	// Define the init method
+//	@PostConstruct // This instructs Spring to execute after the constructor and after injection of dependencies
+//	public void doMyStartupStuff() {
+//		System.out.println(" >> PingPongCoach class: inside the doMyStartupStuff() method");
+//	}
+//	
+//	// Define the destroy method
+//	@PreDestroy // This instructs Spring to execute the Code before the bean is destroyed
+//	public void doMyCleanupStuff() {
+//		System.out.println(" >> PingPongCoach class: inside the doMyCleanupStuff() method");
+//	}
 		
 	@Override
 	public String getDailyWorkout() {

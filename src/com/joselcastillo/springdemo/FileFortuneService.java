@@ -30,7 +30,7 @@ public class FileFortuneService implements FortuneService_Interface {
 	@PostConstruct
 	private void loadTheFortunesFile() {
 		
-		System.out.println(">> FileFortuneService: inside method loadTheFortunesFile()");
+		System.out.println(">> FileFortuneService class: inside method loadTheFortunesFile()");
 
 		File theFile = new File(fileName);
 		

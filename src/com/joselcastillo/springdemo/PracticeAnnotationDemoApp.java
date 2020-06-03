@@ -63,5 +63,6 @@ public class PracticeAnnotationDemoApp {
 	PingPong Workout: Practice your pingpong drop shot
 	PingPong fortune says: Today is your lucky day.
 	 >> PingPongCoach class: inside the doMyCleanupStuff() method
+	 
 
 */
