@@ -172,4 +172,6 @@ public class JavaConfigDemoApp {
 	FINEST: Invoking destroy method on bean 'tennisCoach': public void com.joselcastillo.springdemo.TennisCoach.doMyCleanupStuff()
 	 >> TennisCoach class: inside the doMyCleanupStuff() method
 	 
+	 
+	 
 */ 

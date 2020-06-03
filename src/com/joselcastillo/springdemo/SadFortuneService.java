@@ -1,0 +1,10 @@
+package com.joselcastillo.springdemo;
+
+public class SadFortuneService implements FortuneService_Interface {
+
+	@Override
+	public String getFortune() {
+		return "SadFortuneService says, Today is a sad day";
+	}
+
+}
