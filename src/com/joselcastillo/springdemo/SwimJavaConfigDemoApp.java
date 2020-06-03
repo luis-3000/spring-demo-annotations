@@ -22,7 +22,7 @@ public class SwimJavaConfigDemoApp {
 		// Call new method to get the daily fortune
 		System.out.println(theCoach.getDailyFortune());
 		
-		// Call out new swim coach methods ... have the properties values injected
+		// Call our new swim coach methods which have the properties values injected
 		System.out.println("email: " + theCoach.getEmail());
 		System.out.println("team: " + theCoach.getTeam());
 		
