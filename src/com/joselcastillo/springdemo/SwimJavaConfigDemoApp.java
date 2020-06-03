@@ -11,16 +11,20 @@ public class SwimJavaConfigDemoApp {
 		AnnotationConfigApplicationContext appContext = 
 				new AnnotationConfigApplicationContext(SportConfig.class);
 		
-		// 4). Get the bean from the Spring container
+		// 4). Get the bean from the Spring application container/context
 		// Changed from passing the explicit "thatSillyCoach" bean id, to a default bean id 'tennisCoach'
 		// (which should be the class name in use but with the first letter converted to lower case)
-		Coach_Interface theCoach = appContext.getBean("swimCoach", Coach_Interface.class);
+		SwimCoach theCoach = appContext.getBean("swimCoach", SwimCoach.class);
 		
 		// Call some methods on the bean
 		System.out.println(theCoach.getDailyWorkout());
 		
 		// Call new method to get the daily fortune
 		System.out.println(theCoach.getDailyFortune());
+		
+		// Call out new swim coach methods ... have the properties values injected
+		System.out.println("email: " + theCoach.getEmail());
+		System.out.println("team: " + theCoach.getTeam());
 		
 		// Close the application context
 		appContext.close();
@@ -35,5 +39,6 @@ public class SwimJavaConfigDemoApp {
     Swim workout: Swim 1000 meters as a warm up
 	Swim daily fortune says: SadFortuneService says, Today is a sad day
 
-    
+   
+   
 */ 

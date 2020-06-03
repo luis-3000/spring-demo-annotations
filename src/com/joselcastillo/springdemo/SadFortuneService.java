@@ -4,7 +4,7 @@ public class SadFortuneService implements FortuneService_Interface {
 
 	@Override
 	public String getFortune() {
-		return "SadFortuneService says, Today is a sad day";
+		return "SadFortuneService says, today is a sad day";
 	}
 
 }
